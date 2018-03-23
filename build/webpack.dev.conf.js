@@ -25,6 +25,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
+        {
+          from: /^\/components\/.*$/,
+          to: function (context) {
+            return path.posix.join(config.dev.assetsPublicPath, 'static', context.parsedUrl.pathname)
+          }
+        },
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
@@ -62,6 +68,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       {
         from: path.resolve(__dirname, '../static'),
         to: config.dev.assetsSubDirectory,
+        ignore: ['.*']
+      },
+      {
+        from: path.resolve(__dirname, '../node_modules/st-components/dist/components'),
+        to: path.posix.join(config.dev.assetsSubDirectory, 'components'),
         ignore: ['.*']
       }
     ])
