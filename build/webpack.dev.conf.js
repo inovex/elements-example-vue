@@ -63,19 +63,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    // copy custom static assets
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
-      },
-      {
-        from: path.resolve(__dirname, '../node_modules/st-components/dist/components'),
-        to: path.posix.join(config.dev.assetsSubDirectory, 'components'),
-        ignore: ['.*']
-      }
-    ])
+    require('@inovex/elements/webpack-plugin')()
   ]
 })
 

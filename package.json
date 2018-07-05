@@ -11,11 +11,10 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "postinstall": "cd node_modules/st-components && yarn install && yarn build",
     "build": "node build/build.js"
   },
   "dependencies": {
-    "st-components": "ssh://git@gitlab.inovex.de:2424/inovex-elements/stencil-components.git",
+    "@inovex/elements": "^0.1.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

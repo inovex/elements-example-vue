@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>st-input</h2>
-    <st-input st-icon="user" st-name="email" st-placeholder="Email"></st-input>
+    <h2>ino-input</h2>
+    <ino-input ino-placeholder="Email"></ino-input>
   </div>
 </template>
 
