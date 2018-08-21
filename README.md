@@ -1,6 +1,6 @@
-# stencil-in-vuejs
+# example-vuejs
 
-> A Vue.js project
+> A Vue.js project including inovex elements components
 
 ## Build Setup
 
