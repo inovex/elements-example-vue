@@ -6,8 +6,7 @@
 
 ``` bash
 # log into private register (username inovex, password inovex)
-npm set registry https://registry.elements.inovex.io
-npm adduser --registry https://registry.elements.inovex.io
+npm adduser --registry https://registry.elements.inovex.io --scope=@inovex
 npm config set always-auth true
 
 # install dependencies
