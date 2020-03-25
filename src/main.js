@@ -1,21 +1,21 @@
-import '@inovex/elements' // import the web components loader
-
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
-import router from './router'
+import App from './App.vue'
+import { applyPolyfills, defineCustomElements } from '@inovex/elements/dist/loader';
+import { addIcons } from '@inovex/elements/dist/collection/util/icons';
+import { ICON_PATHS } from '@inovex/elements/dist/inovex-elements/icon-assets/SVG/index.esm.js';
+
+addIcons(ICON_PATHS);
+
+Vue.config.ignoredElements = [
+  /^ino-/ // ignore all web components starting with "ino-"
+];
+
+applyPolyfills().then(() => {
+  defineCustomElements();
+});
 
 Vue.config.productionTip = false
 
-Vue.config.ignoredElements = [
-  /^st-/ // ignore all web components starting with "st-"
-]
-
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
+  render: h => h(App),
+}).$mount('#app')
