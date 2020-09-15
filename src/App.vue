@@ -1,41 +1,70 @@
 <template>
-    <div>
-        <ino-input
-                :ino-placeholder="userPlaceholder"
-                :value="userValue"
-                @valueChange="onValueChange($event.detail)"
-                ino-type="text"
-                ino-icon-leading="true"
-        >
-            <ino-icon slot="ino-icon-leading" ino-icon="users"></ino-icon>
-        </ino-input>
-    </div>
+  <div id="app">
+    <h2>Simple To Do App</h2>
+    <ino-input
+        ino-placeholder="What to do ..."
+        :value="inputText"
+        @valueChange="onValueChange($event.detail)"
+        ino-type="text"
+        ino-icon-trailing="true"
+        v-on:keyup.enter="onAdd()"
+    >
+      <ino-icon ino-clickable @clickEl="onAdd()" slot="ino-icon-trailing" ino-icon="add"></ino-icon>
+    </ino-input>
+    <ino-list>
+      <ino-list>
+        <ino-list-item v-for="todo in todos" :key="todo" :ino-text="todo">
+          <ino-checkbox @checkedChange="onCheck(todo)" slot="ino-leading"></ino-checkbox>
+        </ino-list-item>
+      </ino-list>
+      <ino-list-divider></ino-list-divider>
+      <ino-list>
+        <ino-list-item v-for="todo in checkedTodos" :key="todo" :ino-text="todo">
+          <ino-checkbox checked="true" @checkedChange="onUncheck(todo)" slot="ino-leading"></ino-checkbox>
+        </ino-list-item>
+      </ino-list>
+    </ino-list>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'TestComponent',
-        data () {
-            return {
-                userValue: 'Freaky Fox',
-                userPlaceholder: 'Username'
-            };
-        },
-        methods: {
-            onValueChange: function (newUsername) {
-                this.userValue = newUsername
-            }
-        }
+export default {
+  name: 'TestComponent',
+  data() {
+    return {
+      todos: ['Go to the grocery store', 'Clean up desk'],
+      checkedTodos: ['Fix bug'],
+      inputText: ''
     };
+  },
+  methods: {
+    onValueChange: function (text) {
+      this.inputText = text;
+    },
+    onAdd: function () {
+      this.todos = [...this.todos, this.inputText];
+      this.inputText = '';
+    },
+    onCheck: function (checkedTodo) {
+      this.todos = this.todos.filter(todo => todo !== checkedTodo);
+      this.checkedTodos = [...this.checkedTodos, checkedTodo];
+
+    },
+    onUncheck: function (uncheckedTodo) {
+      this.checkedTodos = this.checkedTodos.filter(todo => todo !== uncheckedTodo);
+      this.todos = [...this.todos, uncheckedTodo];
+    }
+  }
+};
 </script>
 
 <style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+#app {
+  text-align: center;
+  margin: 10vw 30vw;
+}
+
+h2 {
+  color: #003c7e;
+}
 </style>
