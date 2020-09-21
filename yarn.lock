@@ -827,16 +827,17 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@inovex/elements@^0.21.0":
-  version "0.21.0"
-  resolved "https://artifactory.inovex.de/artifactory/api/npm/internal-npm/@inovex/elements/-/@inovex/elements-0.21.0.tgz#1f5b4f4cf71c8bd2175650679524d227a13e01d8"
-  integrity sha1-H1tPTPcci9IXVlBnlSTSJ6E+Adg=
+"@inovex.de/elements@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-1.0.0.tgz#9e9e30f34bfa7eee4e33d2ceeb3a2513a46f4d45"
+  integrity sha512-G/zdJ4yS3aU7EqzmejqbSv8UrhC1mW6Qi/v1HNzzCcy319bMba/z5bS7AV6rsYK8zKXPig2XpZp1pb+oqMgPsg==
   dependencies:
     "@material/button" "^5.1.0"
     "@material/card" "^5.1.0"
     "@material/checkbox" "^5.1.0"
     "@material/chips" "^5.1.0"
     "@material/data-table" "^5.1.0"
+    "@material/dialog" "^5.1.0"
     "@material/drawer" "^5.1.0"
     "@material/fab" "^5.1.0"
     "@material/form-field" "^5.1.0"
@@ -972,6 +973,25 @@
   version "5.1.0"
   resolved "https://registry.npmjs.org/@material/density/-/density-5.1.0.tgz#d36512d413a00595122f98303766dae6b9e9fabe"
   integrity sha512-jmp6AgiNYosl+HicxWCa8vib9pg9tNxRcf+6f9LDkDYJ9jtO90PXuypyd0hO64JZ9Df7BywFj5hTWPERG1FBbw==
+
+"@material/dialog@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/@material/dialog/-/dialog-5.1.0.tgz#3ea64b22b728e1e1251aaf0bb4b4a675aad73785"
+  integrity sha512-CxA0W0uzXuwJNivB6Gbb7DvtJL3+J7ghsaSL1HfycXVXfdrT1nSidLyOIthRMVBUBJrAMfusvtzFDgXr0TWqDg==
+  dependencies:
+    "@material/animation" "^5.1.0"
+    "@material/base" "^5.1.0"
+    "@material/button" "^5.1.0"
+    "@material/dom" "^5.1.0"
+    "@material/elevation" "^5.1.0"
+    "@material/feature-targeting" "^5.1.0"
+    "@material/ripple" "^5.1.0"
+    "@material/rtl" "^5.1.0"
+    "@material/shape" "^5.1.0"
+    "@material/theme" "^5.1.0"
+    "@material/touch-target" "^5.1.0"
+    "@material/typography" "^5.1.0"
+    tslib "^1.9.3"
 
 "@material/dom@^5.1.0":
   version "5.1.0"
