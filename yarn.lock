@@ -827,10 +827,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@inovex.de/elements@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-1.0.0.tgz#9e9e30f34bfa7eee4e33d2ceeb3a2513a46f4d45"
-  integrity sha512-G/zdJ4yS3aU7EqzmejqbSv8UrhC1mW6Qi/v1HNzzCcy319bMba/z5bS7AV6rsYK8zKXPig2XpZp1pb+oqMgPsg==
+"@inovex.de/elements@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-1.0.2.tgz#06d2c2ea81c5611749048ccba850df2db4debb8b"
+  integrity sha512-hPdoaEJ1Obihbyh7xwq4fvepq/hERVWsi6u4qQHzE4ACdiUEhcXvRzKqy3DH9akjk3zSpsulTc1jRbbbs/XN/g==
   dependencies:
     "@material/button" "^5.1.0"
     "@material/card" "^5.1.0"
