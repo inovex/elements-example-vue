@@ -827,10 +827,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@inovex.de/elements@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-1.0.2.tgz#06d2c2ea81c5611749048ccba850df2db4debb8b"
-  integrity sha512-hPdoaEJ1Obihbyh7xwq4fvepq/hERVWsi6u4qQHzE4ACdiUEhcXvRzKqy3DH9akjk3zSpsulTc1jRbbbs/XN/g==
+"@inovex.de/elements@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/@inovex.de/elements/-/elements-1.1.0.tgz#cf34b59792f9796a4b7fdf6e1a87e505fb37dd4d"
+  integrity sha512-a1Qe+vhk1gwF0tFZwiCbNj80O8DzPxx9ACZbNCRXcnlM0cWnBsBDac7hELBxeMwcc96OvKoYuo05XMhU6l9oyw==
   dependencies:
     "@material/button" "^5.1.0"
     "@material/card" "^5.1.0"
@@ -858,13 +858,14 @@
     "@material/tab-scroller" "^5.1.0"
     "@material/textfield" "^5.1.0"
     "@material/typography" "^5.1.0"
-    "@stencil/core" "1.12.6"
+    "@stencil/core" "2.0.3"
     autosize "^4.0.2"
     classnames "^2.2.6"
     currency.js "^1.2.2"
     flatpickr "^4.4.6"
     highlight.js "^9.18.1"
     tippy.js "^6.2.3"
+    typeface-lato "^0.0.75"
 
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
@@ -1414,12 +1415,10 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-"@stencil/core@1.12.6":
-  version "1.12.6"
-  resolved "https://registry.npmjs.org/@stencil/core/-/core-1.12.6.tgz#77b5bf6d288f97a70d4ea352645f991e82616020"
-  integrity sha512-fOHG9x92wxlQOlp9YRouLlejFShtfvZEx4LFjNi7bqTX/nHTetdv3Ir+J+SanebjBuJgKiAmLIwXviQ0Geq23w==
-  dependencies:
-    typescript "3.8.3"
+"@stencil/core@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@stencil/core/-/core-2.0.3.tgz#8719d3131362076a35b7a7c865de4720766f3f47"
+  integrity sha512-d4qLDN7HKwJEK+ljhknD8azpM4bF49Dv7h5yG3RF+SPo8uozDq3p5ZNj1MgZoRgzh04kXNyG/MKnD8H2QN5YVw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -8207,10 +8206,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.8.3:
-  version "3.8.3"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
-  integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
+typeface-lato@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.npmjs.org/typeface-lato/-/typeface-lato-0.0.75.tgz#8aa11c5611dc38416837c089b265a2abd1f7dd31"
+  integrity sha512-iA5uJD4PSTyIE4BDiSOexQeXkDkiJuX4Hu3wh3saJ06EB2TvJayab1Lbbmqq2je/LQv7KCQZHZmC0k4hedd8sw==
 
 uglify-js@3.4.x:
   version "3.4.10"
