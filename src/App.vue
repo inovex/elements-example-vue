@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <h2>Simple To Do App</h2>
+    <ino-button>Working</ino-button>
+    <!-- The components below do not seem to be working, did the syntax change from v2 to v3? -->
     <ino-input
         ino-placeholder="What to do ..."
         :value="inputText"
@@ -9,18 +11,18 @@
         ino-icon-trailing="true"
         v-on:keyup.enter="onAdd()"
     >
-      <ino-icon ino-clickable @clickEl="onAdd()" slot="ino-icon-trailing" ino-icon="add"></ino-icon>
+      <ino-icon ino-clickable @clickEl="onAdd()" ino-icon="add"></ino-icon>
     </ino-input>
     <ino-list>
       <ino-list>
         <ino-list-item v-for="todo in todos" :key="todo" :ino-text="todo">
-          <ino-checkbox @checkedChange="onCheck(todo)" slot="ino-leading"></ino-checkbox>
+          <ino-checkbox @checkedChange="onCheck(todo)"></ino-checkbox>
         </ino-list-item>
       </ino-list>
       <ino-list-divider></ino-list-divider>
       <ino-list>
         <ino-list-item v-for="todo in checkedTodos" :key="todo" :ino-text="todo">
-          <ino-checkbox checked="true" @checkedChange="onUncheck(todo)" slot="ino-leading"></ino-checkbox>
+          <ino-checkbox checked="true" @checkedChange="onUncheck(todo)"></ino-checkbox>
         </ino-list-item>
       </ino-list>
     </ino-list>
