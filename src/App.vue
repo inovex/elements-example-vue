@@ -6,16 +6,16 @@
         @openChange="() => this.isNavOpen = !this.isNavOpen"
     >
       <ino-list slot="content">
-        <ino-nav-item ino-text="My Todo List">
+        <ino-nav-item ino-text="My Todo List" @click="changeTab(0)">
           <ino-icon ino-icon="menu" />
         </ino-nav-item>
-        <ino-nav-item ino-text="My V-Card">
+        <ino-nav-item ino-text="My V-Card" @click="changeTab(1)">
           <ino-icon ino-icon="user" />
         </ino-nav-item>
-        <ino-nav-item ino-text="Contact me">
+        <ino-nav-item ino-text="Contact me" @click="changeTab(2)">
           <ino-icon ino-icon="onboarding" />
         </ino-nav-item>
-        <ino-nav-item ino-text="Gallery">
+        <ino-nav-item ino-text="Gallery" @click="changeTab(3)">
           <ino-icon ino-icon="camera" />
         </ino-nav-item>
       </ino-list>
@@ -92,7 +92,10 @@ export default {
   }),
   methods: {
     onTabChange({detail}) {
-      this.currentTab = detail;
+      this.changeTab(detail);
+    },
+    changeTab(tabId) {
+      this.currentTab = tabId;
     },
     onContactFormSubmit(data) {
       this.contractFormData = data;
