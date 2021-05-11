@@ -23,7 +23,13 @@
               @checkedChange="onCheckedChange(todo)"
               slot="ino-leading"
           />
+          <ino-tooltip
+              slot="ino-trailing"
+              ino-label="Remove item"
+              ino-placement="right"
+              :ino-for="`remove-unchecked-${i}`" />
           <ino-icon-button
+              :id="`remove-unchecked-${i}`"
               slot="ino-trailing"
               ino-icon="remove"
               @click="removeTodo(todo)"
@@ -40,7 +46,13 @@
               @checkedChange="onCheckedChange(todo)"
               slot="ino-leading"
           />
+          <ino-tooltip
+              slot="ino-trailing"
+              ino-label="Remove item"
+              ino-placement="right"
+              :ino-for="`remove-checked-${i}`" />
           <ino-icon-button
+              :id="`remove-checked-${i}`"
               slot="ino-trailing"
               ino-icon="remove"
               @click="removeTodo(todo)"
@@ -126,5 +138,10 @@ export default {
 .list-action-buttons {
   display: flex;
   justify-content: space-between;
+}
+
+ino-menu {
+  position: absolute;
+  z-index: 1000;
 }
 </style>
