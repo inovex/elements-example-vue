@@ -10,16 +10,16 @@
   "dependencies": {
     "@inovex.de/elements": "^3.0.1",
     "core-js": "^3.12.1",
-    "vue": "^2.6.12"
+    "vue": "^3.0.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.11",
     "babel-eslint": "^10.0.3",
     "eslint": "^7.26.0",
-    "eslint-plugin-vue": "^7.9.0",
-    "vue-template-compiler": "^2.6.12"
+    "eslint-plugin-vue": "^7.9.0"
   },
   "eslintConfig": {
     "root": true,
@@ -27,13 +27,15 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-deprecated-slot-attribute": "off"
+    }
   },
   "browserslist": [
     "> 1%",
