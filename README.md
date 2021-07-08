@@ -1,5 +1,7 @@
 # elements-example
 
+[![Edit example-vuejs](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/inovex/elements-example-vue/tree/master/?fontsize=14&hidenavigation=1&theme=dark)
+
 ## Project setup
 ```
 yarn install
