@@ -1,3 +1,5 @@
+❗ This project has been moved to the [main repository of the inovex-elements](https://github.com/inovex/elements/tree/master/packages/elements-vue-example)
+
 # elements-example
 
 ## Project setup
